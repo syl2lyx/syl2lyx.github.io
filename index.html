@@ -297,7 +297,7 @@
 		var m_seconds = parseInt(duration % 1000);
 	    if (m_seconds < 10)
 			m_seconds = "00" + m_seconds;
-	    if (m_seconds < 100)
+	    else if (m_seconds < 100)
 			m_seconds = "0" + m_seconds;
 		
 		// 获取时间差的 秒
