@@ -291,14 +291,17 @@
 	    var start_time = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
 		// 计算时间差
 	    var duration = parseInt(new Date() - start_time);
-		// 本来是3位数的毫秒，取两位
-		var duration = parseInt(new Date() - start_time) / 10;
+		// 本来是3位数的毫秒，取三位
+		var duration = parseInt(new Date() - start_time);
 		// 获取时间差的 毫秒
-		var m_seconds = parseInt(duration % 100);
+		var m_seconds = parseInt(duration % 1000);
 	    if (m_seconds < 10)
+			m_seconds = "00" + m_seconds;
+	    if (m_seconds < 100)
 			m_seconds = "0" + m_seconds;
+		
 		// 获取时间差的 秒
-		duration = parseInt(duration / 100);
+		duration = parseInt(duration / 1000);
 	    var seconds = parseInt(duration % 60);
 	    if (seconds < 10)
 	        seconds = "0" + seconds;
