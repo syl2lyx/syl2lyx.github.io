@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微信年度聊天报告</title>
+    <title>2023年度微信聊天报告</title>
     <link rel="stylesheet" href="https://memotrace.lc044.love/static/css/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
     <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts-wordcloud.min.js"></script>
@@ -31,18 +31,18 @@
             <div class="user-container">
                 <div class="user">
                     <img class="avatar" src="https://wx.qlogo.cn/mmhead/ver_1/EZCMicCsPxgWeA3H7dcqTY8ks37P9l4gdAkoKMLCWpcy5J3r8KCibGic6224gCWkRPCiaV5eVE9bmkmYgwrqXKRN3diatQwedTXc04LZX01V0yjqoHS9gUMkkVE52o4eHia2OZ/132">
-                  <span class="nickname">ㅤ</span>
+                  <span class="nickname">老公</span>
                 </div>
 
                 <img src="https://memotrace.lc044.love/static/img/铃铛.png" alt="Right Top Image" class="spliter-img">
                 <div class="user">
                     <img class="avatar" src="https://wx.qlogo.cn/mmhead/ver_1/6Ewq2X8ztCvCICiaQiaPqbI6zRdm9ibKuianluhNUU7Bspm86WZyjhXKX8UaEribjZvyicUGnF4CXP5oibkLUqEh0RQw9GdQ2FUG2GvSBP9rbpf7yg/132">
-                  <span class="nickname">老婆宝贝</span>
+                  <span class="nickname">老婆</span>
                 </div>
             </div>
             <div>
-                <p class="mt-3">我们第一次聊天在</p>
-                <p id="first_time" class="first-time">2020-11-26 17:58:58</p>
+                <p class="mt-3">我们在一起是在</p>
+                <p id="first_time" class="first-time">2020-11-06 13:06:28</p>
                 <p class="mt-3">距今已有</p>
                 <div class="mt-3">
                     <span id="t_d"></span>
@@ -51,12 +51,6 @@
                     <span id="t_s"></span>
                 </div>
             </div>
-            <!-- <div>
-                <img src="img/雪人.gif">
-            </div>
-            <div>
-                <img src="img/雪人1.gif">
-            </div> -->
         </div>
         </div>
     </div>
@@ -166,7 +160,7 @@
                         
                              <div class="item item-right">
                                 <div class="bubble bubble-right">
-                                    老婆
+                                    老婆晚安爱你呦~
                                 </div>
                                  <img class="bubble-avatar" src="https://wx.qlogo.cn/mmhead/ver_1/EZCMicCsPxgWeA3H7dcqTY8ks37P9l4gdAkoKMLCWpcy5J3r8KCibGic6224gCWkRPCiaV5eVE9bmkmYgwrqXKRN3diatQwedTXc04LZX01V0yjqoHS9gUMkkVE52o4eHia2OZ/132">
                             </div>
@@ -176,7 +170,7 @@
                              <div class="item item-left">
                                 <img class="bubble-avatar" src="https://wx.qlogo.cn/mmhead/ver_1/6Ewq2X8ztCvCICiaQiaPqbI6zRdm9ibKuianluhNUU7Bspm86WZyjhXKX8UaEribjZvyicUGnF4CXP5oibkLUqEh0RQw9GdQ2FUG2GvSBP9rbpf7yg/132">
                                 <div class="bubble bubble-left">
-                                    我一开始就说复制原文就行了 你要是也看不懂就一开始就告诉我 推了三个小时又这问题那问题 你看不懂我想干啥 我都看不懂你问那些话的意义是啥
+                                    老公晚安爱你
                                 </div>
                             </div>
                         
@@ -1132,8 +1126,8 @@
     });
   </script>
   <script type="text/javascript"> function getRTime() {
-    var tt = document.getElementById("first_time").innerText;
-    var EndTime = new Date(tt);
+    var arr = "2020-11-06 13:06:28".split(/[- :]/);
+    var EndTime = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
     var NowTime = new Date();
     var t = NowTime.getTime()-EndTime.getTime();
     var d = Math.floor(t / 1000 / 60 / 60 / 24);
